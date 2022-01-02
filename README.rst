@@ -1,4 +1,4 @@
-Template for the Read the Docs tutorial
+The CAMELS-SAM simulation suite for machine learning
 =======================================
 
 This GitHub template includes fictional Python library
