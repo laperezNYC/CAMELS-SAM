@@ -57,6 +57,11 @@ Redshifts
 ------------
 The CAMELS-SAM simulations were generated over 100 snapshots between z=127 and z=0, following the same steps as ``IllustrisTNG``:
 
+.. raw:: html
+
+   <details>
+   <summary> Click to expand/collapse very large table of redshifts </summary>
+
 +------------+------------+-----------+---------------------+
 |Snapshot[#] | Redshift   | Age [Gyr] | Lookback time [Gyr] |   
 +============+============+===========+=====================+
@@ -261,7 +266,9 @@ The CAMELS-SAM simulations were generated over 100 snapshots between z=127 and z
 |99          |0.00        |13.803     | 0.000               |
 +------------+------------+-----------+---------------------+
 
+.. raw:: html
 
+   </details>
 
 Creating recipes
 ----------------
