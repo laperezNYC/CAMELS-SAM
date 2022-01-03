@@ -60,7 +60,7 @@ The CAMELS-SAM simulations were generated over 100 snapshots between z=127 and z
 .. raw:: html
 
    <details>
-   <summary> Click to expand/collapse very large table of redshifts </summary>
+   <summary> Click to expand/collapse this very large table of redshifts </summary>
 
 +------------+------------+-----------+---------------------+
 |Snapshot[#] | Redshift   | Age [Gyr] | Lookback time [Gyr] |   
@@ -269,6 +269,103 @@ The CAMELS-SAM simulations were generated over 100 snapshots between z=127 and z
 .. raw:: html
 
    </details>
+
+The Santa Cruz SAM for galaxy formation
+----------------
+
+We use the Santa Cruz semi-analytic model (SAM) for galaxy formation (Somerville et al. 2008, 2015, 2021) to robustly populate our large N-body simulations with galaxies. SAMs can be thought of an alternative to full hydrodynamic simulations, which apply simplified empirical recipes for physical processes of galaxy formation and evolution within dark matter halo 'merger trees' (e.g. from ``ConsistentTrees`` our of ``ROCKSTAR``). Like numerical simulations, SAMs include free parameters that are calibrated to galaxy observations (e.g. Yung et al. 2019 for the local universe). The SC-SAM pipeline used in this work is nearly identical to that applied to IllustrisTNG300 in Gabrielpillai et al. (2021); see their work for complete justification and verification for the fiducial set up.
+
+
+.. raw:: html
+
+   <details>
+   <summary> Click to expand/collapse this table describing the SC-SAM **galaxy** outputs at each redshift </summary>
+
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| Field                    | Shape  | Units    | Description                                                                     |
++==========================+========+==========+=================================================================================+
+| GalpropBirthHaloID       | N      | --       | ID of host halo from Haloprop                                                   |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropHaloIndex         | N      | --       | Index of host halo in Haloprop (recommend usage: when loading whole subvolumes) |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropHaloIndex_Snapshot| N      | --       | Index of host halo in Haloprop (recommended usage: when loading snapshots)      |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropMBH               | N      | 10^9 M☉  | Black hole mass                                                                 |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropMH2               | N      | 10^9 M☉  | Molecular hydrogen cold gas mass                                                |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropMHI               | N      | 10^9 M☉  | Neutral hydrogen cold gas mass                                                  |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropMHII              | N      | 10^9 M☉  | Singly ionized hydrogen cold gas mass                                           |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropMaccdot           | N      | M☉ / yr  | accretion rate onto black hole                                                  |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropMaccdot_radio     | N      | M☉ / yr  | accretion rate onto black hole in radio mode                                    |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropMbulge            | N      | 10^9 M☉  | Stellar mass of the bulge                                                       |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropMcold             | N      | 10^9 M☉  | Total cold gas mass                                                             |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropMvir              | N      | 10^9 M☉  | Total dark matter halo mass                                                     |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropMstar             | N      | 10^9 M☉  | Total stellar mass                                                              |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropMstar_merge       | N      | 10^9 M☉  | Stellar mass entering via mergers                                               |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropMstrip            | N      | 10^9 M☉  | Stripped mass of DM sub-halo |                                                  |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropMu_merger         | N      | --       | mass ratio of last merger (see S08)                                             |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropOutflowRate_Mass  | N      | M☉ / yr  | rate of outflowing gas from ISM                                                 |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropOutflowRate_Metal | N      | M☉ / yr  | rate of outflowing metals from ISM                                              |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropPos               | N, 3   | cMpc     | x, y, and z coordinates                                                         |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropRbulge            | N      | kpc      | 3D half-mass Radius of bulge                                                    |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropRdisk             | N      | kpc      | 3D half-mass Radius of disk                                                     |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropRedshift          | N      | --       | redshift                                                                        |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropRfric             | N      | Mpc      | distance from halo center                                                       |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropRhalo             | N      | Mpc      | halo virial radius                                                              |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropRootHaloID        | N      | --       | ID of root halo at z = 0 from Haloprop                                          |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropSatType           | N      | --       | 0 = central                                                                     |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropSfr               | N      | M☉ / yr  | instantaneous SFR                                                               |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropSfrave100myr      | N      | M☉ / yr  | SFR averaged over 100 Myr                                                       |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropSfrave1gyr        | N      | M☉ / yr  | SFR averaged over 1 Gyr                                                         |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropSfrave20myr       | N      | M☉ / yr  | SFR averaged over 20 Myr                                                        |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropSigmaBulge        | N      |  km / s  | velocity dispersion of bulge                                                    |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropTmerger           | N      | Gyr      | time since last merger                                                          |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropTmerger_major     | N      | Gyr      | time since last major merger                                                    |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropTsat              | N      | Gyr      | time since galaxy became a satellite in this halo                               |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropVdisk             | N      | km / s   | rotation velocity of disk                                                       |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropVel               | N, 3   | km / s   | x, y, and z components of velocity                                              |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropZcold             | N      | Z☉ * M☉  | metal mass in cold gas                                                          |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+| GalpropZstar             | N      | Z☉ * M☉  | metal mass in stars                                                             |
++--------------------------+--------+----------+---------------------------------------------------------------------------------+
+
+
+.. raw:: html
+
+   </details>
+
 
 Creating recipes
 ----------------
