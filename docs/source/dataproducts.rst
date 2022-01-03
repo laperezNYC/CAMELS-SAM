@@ -1,8 +1,12 @@
 .. _dataproducts:
 
 *******************
-Halo catalogs and merger trees
+Data Products
 *******************
+
+
+Halo catalogs and Merger Trees
+============================
 
 The folder ``Rockstar/CAMELS-SAM/`` contains the CAMELS-SAM Rockstar halo catalogs for each simulation. The format of the catalogs is the default of the code, and we refer the user to the `Rockstar documentation <https://bitbucket.org/gfcstanford/rockstar/src/main/>`_ for further details. Due to storage limitations, we have kept just the `out_??.list` files and all ``ROCKSTAR`` configuration files that were used to run it. Additional files are stored on long-term magnetic tape; please contact the CAMELS team to discuss accessing them.
 
@@ -10,9 +14,8 @@ We also release the merger trees constructed through ``ConsistentTrees``, `tree_
 
 
 
-*******************
 The Santa Cruz SAM for galaxy formation
-*******************
+===================
 
 We use the Santa Cruz semi-analytic model (SAM) for galaxy formation (Somerville et al. 2008, 2015, 2021) to robustly populate our large N-body simulations with galaxies. SAMs can be thought of an alternative to full hydrodynamic simulations, which apply simplified empirical recipes for physical processes of galaxy formation and evolution within dark matter halo 'merger trees' (e.g. from ``ConsistentTrees`` our of ``ROCKSTAR``). Like numerical simulations, SAMs include free parameters that are calibrated to galaxy observations (e.g. Yung et al. 2019 for the local universe). The SC-SAM pipeline used in this work is nearly identical to that applied to IllustrisTNG300 in Gabrielpillai et al. (2021); see their work for complete justification and verification for the fiducial set up.
 
