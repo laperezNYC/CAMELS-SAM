@@ -19,3 +19,4 @@ Contents
    dataproducts
    access
    openSAM
+   contact
