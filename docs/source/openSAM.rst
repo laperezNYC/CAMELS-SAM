@@ -7,6 +7,7 @@ The Santa Cruz SAM galaxy and halo catalogs are stored as text files with comma-
 We give here an example for how to open these files and pull out galaxy or halo data fulfilling certain conditions. This runs in ``python3``, and most crucically requires ``pandas``, ``subprocess``, and ``numpy``. As the most relevant example for the original creators, this is how to pull out information at a single redshift:
 
 .. warning::
+
 Please note that L.A. Perez is an astrophysicist that taught themselves Python for specific science goals. There are indubitably more efficient and aesthetically pleasing ways of doing this, such as how A. Gabrielpillai created .hdf5 files from the SC-SAM default files.
 
 .. code-block:: python
@@ -85,7 +86,7 @@ Please note that L.A. Perez is an astrophysicist that taught themselves Python f
 
 Lines commented out are to confirm the files are being read correctly; *checknums* and *All_halos.shape* should be the same length, if all (sub)halos were correctly accessed at each redshift.
 
-Due to know the ``.dat`` format is organized, one must specify exactly which properties should be collected as the ``fieldswanted`` string. See ??? for the complete list of available properties for galaxies (*galprop*) and halos (*haloprop*). Additionally, the number of subvolumes is important, and corresponds to how the SC-SAM automatically splits up large volumes for processing (either 1 or 8 for CAMELS-SAM). For example, to access galaxy data at *z=0, 0.1, 0.5, 1.0* for CAMELS-SAM simulations LH0 through LH5:
+Due to know the ``.dat`` format is organized, one must specify exactly which properties should be collected as the ``fieldswanted`` string. See :doc:`dataproducts` for the complete list of available properties for galaxies (*galprop*) and halos (*haloprop*). Additionally, the number of subvolumes is important, and corresponds to how the SC-SAM automatically splits up large volumes for processing (either 1 or 8 for CAMELS-SAM). For example, to access galaxy data at *z=0, 0.1, 0.5, 1.0* for CAMELS-SAM simulations LH0 through LH5:
 
 
 .. code-block:: python
