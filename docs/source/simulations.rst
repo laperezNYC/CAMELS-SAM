@@ -270,6 +270,8 @@ The CAMELS-SAM simulations were generated over 100 snapshots between z=127 and z
 
    </details>
 
+
+
 The Santa Cruz SAM for galaxy formation
 ----------------
 
@@ -365,7 +367,7 @@ We use the Santa Cruz semi-analytic model (SAM) for galaxy formation (Somerville
 .. raw:: html
 
    </details>
-
+   <br />
 
 
 .. raw:: html
@@ -431,7 +433,7 @@ We use the Santa Cruz semi-analytic model (SAM) for galaxy formation (Somerville
 .. raw:: html
 
    </details>
-
+   <br />
 
 
 
