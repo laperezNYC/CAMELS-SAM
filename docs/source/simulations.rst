@@ -1,4 +1,4 @@
-Simulations and Data Products
+Description of Simulations
 =====
 
 .. _Overview:
@@ -269,7 +269,7 @@ The CAMELS-SAM simulations were generated over 100 snapshots between z=127 and z
 .. raw:: html
 
    </details>
-
+   <br />
 
 
 The Santa Cruz SAM for galaxy formation
