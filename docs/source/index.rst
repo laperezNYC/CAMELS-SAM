@@ -13,12 +13,21 @@ See the :doc:`simulations` section for complete details about the suite, includi
    .. figure:: CheckSAMGalaxypositions_cLH11.gif
 
       Slicing through the SAM galaxies in simulation 11--look at that structure!
+      
 
-TESTING: [![Slicing through the dark matter density field of CAMELS-SAM simulation number 643. There is a rich and dense web of structure created by dark matter halos.]({https://drive.google.com/file/d/1NvklJUzq110n3YqXk_cEU4B4xSTJZtoY/view?usp=sharing})]({https://drive.google.com/file/d/19T-gcCxgdNQpcxP6VhdY0RFPToqxi8M_/view?usp=sharing} "Slicing through LH643's dark matter density field)
+
+.. only:: html
+
+   .. figure:: CheckSAMGalaxypositions_cLH19.gif
+
+      And now simulation 19, with very different cosmology!
+
+
    
 .. raw:: html
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
         <iframe src="https://drive.google.com/file/d/19T-gcCxgdNQpcxP6VhdY0RFPToqxi8M_/view?usp=sharing" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+   %TESTING: [![Slicing through the dark matter density field of CAMELS-SAM simulation number 643. There is a rich and dense web of structure created by dark matter halos.]({https://drive.google.com/file/d/1NvklJUzq110n3YqXk_cEU4B4xSTJZtoY/view?usp=sharing})]({https://drive.google.com/file/d/19T-gcCxgdNQpcxP6VhdY0RFPToqxi8M_/view?usp=sharing} "Slicing through LH643's dark matter density field)
     </div>
 
 Contents
