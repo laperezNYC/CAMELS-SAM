@@ -12,6 +12,10 @@ The available CAMELS-SAM data is stored in the Rusty cluster of the Flatiron Ins
 
 We gently remind users that CAMELS-SAM is large, even as we have limited ourselves to the most broadly useful data products. The *smallest* data products in CAMELS-SAM are the SC-SAM galaxy catalogs, which are approximately 5GB per simulation, totaling 5TB across the suite. All available CAMELS-SAM data products total just under 40TB. 
 
+Rusty
+~~~~~
+
+Users with an account on the Flatiron Institute Rusty cluster, can find all CAMELS-SAM data in ``/mnt/ceph/users/camels/PUBLIC_RELEASE``, within the relevant folders as 'SCSAM'. For example, the ``ConsistentTrees`` merger tree files can be found in ``/mnt/ceph/users/camels/PUBLIC_RELEASE/Rockstar/CAMELS-SAM/LH_??/ConsistentTrees/tree_?_?_?.dat``.
 
 Binder
 ~~~~~~
@@ -22,7 +26,7 @@ Binder is a system that allows users to read and manipulate data that is hosted 
 
    Two important things need to be taken into account when using Binder. First, the Binder environment is ephemeral - after a few days of inactivity its contents are deleted, so one has to be vigilant about downloading any analysis results in time. Second, Binder is not designed to carry out long and heavy calculations. In this case we recommend the user to download the data and work with it locally. 
 
-``!!!!!must update!!!!!``
+``!!!!!Still confirming!!!!!``
 .. `Link to Binder <https://binder.flatironinstitute.org/~sgenel/CAMELS_PUBLIC>`_
 
 
@@ -41,22 +45,3 @@ We provide access to the full CAMELS data via a simple uniform resource locator 
 
 .. `URL link <https://users.flatironinstitute.org/~fvillaescusa/priv/f3Mq1fwFYReuAdJTb8xNxa43Jb48L/PUBLIC_RELEASE>`_
 
-
-<!---
-FlatHUB~~~~~~~ 
-
-``!!!!!is this true???!!!!!``
-FlatHUB is a platform that allows users to explore and compare data from different simulations by browsing and filtering the data, making simple preview plots, and downloading sub-samples of the data. We provide access to the SC-SAM galaxy catalogs through this platform.
-
-``!!!!!still to update for !!!!!``
-.. `Link to FlatHUB <http://flathub.flatironinstitute.org/group/cosmo-hydro/camels/>`_
---->
-
-Rusty
-~~~~~
-
-Users with an account on the Flatiron Institute Rusty cluster, can find all CAMELS-SAM data in ``/mnt/ceph/users/camels/PUBLIC_RELEASE``, within the relevant folders as 'SCSAM'. For example, the ``ConsistentTrees`` merger tree files can be found in ``/mnt/ceph/users/camels/PUBLIC_RELEASE/Rockstar/CAMELS-SAM/LH_??/ConsistentTrees/tree_?_?_?.dat``.
-
-
-
-​
