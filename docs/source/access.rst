@@ -4,9 +4,9 @@ Data Access
 
 *UPDATED FROM THE CAMELS DOCUMENTATION AT:* https://camels.readthedocs.io/en/latest/data_access.html.
 
-**L.A.P. Note as of 12:25pm EDT Thursday 1/6/2021: Exact Binder, Globus, and Flathub details are still being ironed out. Permissions for the LH set are still being figured out; apologies for the delay, and thank you for your interest! This message will be removed once all is functioning as intended.**
+**L.A.P. Note as of 3:28pm EDT Thursday 1/6/2021: Permissions for the LH set are still being figured out; apologies for the delay, and thank you for your interest! This message will be removed once all is functioning as intended.**
 
-The available CAMELS-SAM data is stored in the Rusty cluster of the Flatiron Institute in New York City, and its data can be accessed through five different methods:
+The available CAMELS-SAM data is stored in the Rusty cluster of the Flatiron Institute in New York City, and its data can be accessed through four different methods:
 
 .. warning::
 
@@ -15,7 +15,7 @@ We gently remind users that CAMELS-SAM is large, even as we have limited ourselv
 Rusty
 ~~~~~
 
-Users with an account on the Flatiron Institute Rusty cluster, can find all CAMELS-SAM data in ``/mnt/ceph/users/camels/PUBLIC_RELEASE``, within the relevant folders as 'SCSAM'. For example, the ``ConsistentTrees`` merger tree files can be found in ``/mnt/ceph/users/camels/PUBLIC_RELEASE/Rockstar/CAMELS-SAM/LH_??/ConsistentTrees/tree_?_?_?.dat``.
+Users with an account on the Flatiron Institute Rusty cluster, can find all CAMELS-SAM data in ``/mnt/ceph/users/camels/PUBLIC_RELEASE``, within the relevant folders as 'SCSAM' or 'CAMELS-SAM'. For example, the ``ConsistentTrees`` merger tree files can be found in ``/mnt/ceph/users/camels/PUBLIC_RELEASE/Rockstar/CAMELS-SAM/LH_??/ConsistentTrees/tree_?_?_?.dat``.
 
 Binder
 ~~~~~~
@@ -26,7 +26,6 @@ Binder is a system that allows users to read and manipulate data that is hosted 
 
    Two important things need to be taken into account when using Binder. First, the Binder environment is ephemeral - after a few days of inactivity its contents are deleted, so one has to be vigilant about downloading any analysis results in time. Second, Binder is not designed to carry out long and heavy calculations. In this case we recommend the user to download the data and work with it locally. 
 
-``!!!!!Still confirming!!!!!``
 .. `Link to Binder <https://binder.flatironinstitute.org/~sgenel/CAMELS_PUBLIC>`_
 
 
@@ -35,7 +34,6 @@ Globus
 
 The full CAMELS data can be downloaded via globus, an online system designed to efficiently transfer large amounts of data. This is the method we recommend to transfer the data.
 
-``!!!!!Still confirming!!!!!``
 .. `Globus link <https://app.globus.org/file-manager?origin_id=58bdcd24-6590-11ec-9b60-f9dfb1abb183&origin_path=%2F>`_ 
 
 url
@@ -45,3 +43,6 @@ We provide access to the full CAMELS data via a simple uniform resource locator 
 
 .. `URL link <https://users.flatironinstitute.org/~fvillaescusa/priv/f3Mq1fwFYReuAdJTb8xNxa43Jb48L/PUBLIC_RELEASE>`_
 
+
+.. note::
+   At the time of release, CAMELS-SAM is not available on Flathub. We will update this page if it does become available through there.
