@@ -8,9 +8,8 @@ Data Access
 
 The available CAMELS-SAM data is stored in the Rusty cluster of the Flatiron Institute in New York City, and its data can be accessed through four different methods:
 
-.. warning::
-
-We gently remind users that CAMELS-SAM is large, even as we have limited ourselves to the most broadly useful data products. The *smallest* data products in CAMELS-SAM are the SC-SAM galaxy catalogs, which are approximately 5GB per simulation, totaling 5TB across the suite. All available CAMELS-SAM data products total just under 40TB. 
+.. note::
+   We gently remind users that CAMELS-SAM is large, even as we have limited ourselves to the most broadly useful data products. The *smallest* data products in CAMELS-SAM are the SC-SAM galaxy catalogs, which are on average 5GB per simulation, totaling 7TB across the suite. All available CAMELS-SAM data products total just under 40TB. 
 
 Rusty
 ~~~~~
