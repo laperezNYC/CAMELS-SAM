@@ -189,14 +189,14 @@ Within each of these data product directories and within each simulation's folde
 #. | :math:`\sigma_{8}`
    | The true value of :math:`\sigma_{8}` of the given simulation.
 
-#. | :math:`\epsilon_{\rm SN0}` for SC-SAM
-   | The value given to the SC-SAM for the :math:`\epsilon_{\rm SN0}` free parameter, which is equal to the prefactor :math:`A_{\rm SN1}` *times* 1.7 (the best-fit fiducial value for this SC-SAM free amplitude parameter for local observations.)
+#. | :math:`A_{\rm SN1} \times 1.7` for SC-SAM
+   | The value given to the SC-SAM for the :math:`\epsilon_{\rm SN0}` free parameter, which is equal to the prefactor :math:`A_{\rm SN1}` *times* 1.7 (the best-fit fiducial value for this SC-SAM free amplitude parameter for local observations.) :math:`A_{\rm SN1}` was generated log-uniformly between 0.25 and 4.0.
    
-#. | :math:`\alpha_{\rm rh}` for SC-SAM
-   | The value given to the SC-SAM for the :math:`\alpha_{\rm rh}` free parameter, which is equal to the prefactor :math:`A_{\rm SN2}` *plus* 3.0 (the best-fit fiducial value for this SC-SAM free power law slope for local observations.)
+#. | :math:`A_{\rm SN2} + 3.0` for SC-SAM
+   | The value given to the SC-SAM for the :math:`\alpha_{\rm rh}` free parameter, which is equal to the prefactor :math:`A_{\rm SN2}` *plus* 3.0 (the best-fit fiducial value for this SC-SAM free power law slope for local observations.) :math:`A_{\rm SN2}` was generated uniformly between -2.0 and 2.0.
 
-#. | :math:`\kappa_{\rm radio}` for SC-SAM
-   | The value given to the SC-SAM for the :math:`\kappa_{\rm radio}` free parameter, which is equal to the prefactor :math:`A_{\rm AGN}` *times* 0.002 (the best-fit fiducial value for this SC-SAM free amplitude parameter for local observations.)
+#. | :math:`A_{\rm AGN} \times 0.002` for SC-SAM
+   | The value given to the SC-SAM for the :math:`\kappa_{\rm radio}` free parameter, which is equal to the prefactor :math:`A_{\rm AGN}` *times* 0.002 (the best-fit fiducial value for this SC-SAM free amplitude parameter for local observations.) :math:`A_{\rm AGN}` was generated log-uniformly between 0.25 and 4.0.
    
 #. | 0.005
    | This is an unused parameter in CAMELS-SAM for :math:`\epsilon_{\rm wind, QSO}` from the SC-SAM. This was originally meant to be the analogous to :math:`A_{\rm AGN2}` in CAMELS, but the iteration of the SC-SAM used in this work showed little to no response to varying this parameter beyond its fiducial value. 
