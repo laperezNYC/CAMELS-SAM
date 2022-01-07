@@ -2,8 +2,6 @@
 Data Access
 ************
 
-*UPDATED FROM THE CAMELS DOCUMENTATION AT:* https://camels.readthedocs.io/en/latest/data_access.html.
-
 **L.A.P. Note as of 3:28pm EDT Thursday 1/6/2021: Permissions for the LH set are still being figured out; apologies for the delay, and thank you for your interest! This message will be removed once all is functioning as intended.**
 
 The available CAMELS-SAM data is stored in the Rusty cluster of the Flatiron Institute in New York City, and its data can be accessed through four different methods:
@@ -31,17 +29,17 @@ Binder is a system that allows users to read and manipulate data that is hosted 
 Globus
 ~~~~~~~
 
-The full CAMELS data can be downloaded via globus, an online system designed to efficiently transfer large amounts of data. This is the method we recommend to transfer the data.
+The CAMELS-SAM data can be downloaded via globus, an online system designed to efficiently transfer large amounts of data. This is the method we recommend to transfer the data.
 
 `Globus link <https://app.globus.org/file-manager?origin_id=58bdcd24-6590-11ec-9b60-f9dfb1abb183&origin_path=%2F>`_ 
 
 url
 ~~~
 
-We provide access to the full CAMELS data via a simple uniform resource locator (url). We do not recommend downloading large amounts of data through this system, as can be slow and unstable. However, for small or individual files it may be convenient.
+We provide access to the CAMELS-SAM via a simple uniform resource locator (url). We do not recommend downloading large amounts of data through this system, as can be slow and unstable. However, for small or individual files it may be convenient.
 
 `URL link <https://users.flatironinstitute.org/~fvillaescusa/priv/f3Mq1fwFYReuAdJTb8xNxa43Jb48L/PUBLIC_RELEASE>`_
 
 
 .. note::
-   At the time of release, CAMELS-SAM is not available on Flathub. We will update this page if it does become available through there.
+   CAMELS-SAM is not currently configured for access and exploration through Flathub. When is it, we will update this page (expected March 2022). This page was adapted from the CAMELS documentation: https://camels.readthedocs.io/en/latest/data_access.html.
