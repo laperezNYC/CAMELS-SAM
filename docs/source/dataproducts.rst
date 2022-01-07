@@ -183,20 +183,20 @@ Identifying each simulation's parameters
 
 Within each of these data product directories and within each simulation's folder exists the file ``CosmoAstro_params.txt``. This file includes the exact values of the cosmological and astrophysical parameters that created each CAMELS-SAM N-body simulation and halo/galaxy catalogs. There are six numbers listed, which are:
 
-#. | **:math:`\Omega_{M}`**
+#. | :math:`\Omega_{M}`
    | The true value of :math:`\Omega_{M}` of the given simulation.
 
-#. | **:math:`\sigma_{8}`**
+#. | :math:`\sigma_{8}`
    | The true value of :math:`\sigma_{8}` of the given simulation.
 
-#. | **:math:`\epsilon_{\rm SN0}` for SC-SAM**
+#. | :math:`\epsilon_{\rm SN0}` for SC-SAM
    | The value given to the SC-SAM for the :math:`\epsilon_{\rm SN0}` free parameter, which is equal to the prefactor :math:`A_{\rm SN1}` *times* 1.7 (the best-fit fiducial value for this SC-SAM free amplitude parameter for local observations.)
    
-#. | **:math:`\alpha_{\rm rh}` for SC-SAM**
+#. | :math:`\alpha_{\rm rh}` for SC-SAM
    | The value given to the SC-SAM for the :math:`\alpha_{\rm rh}` free parameter, which is equal to the prefactor :math:`A_{\rm SN2}` *plus* 3.0 (the best-fit fiducial value for this SC-SAM free power law slope for local observations.)
 
-#. | **:math:`\kappa_{\rm radio}` for SC-SAM**
+#. | :math:`\kappa_{\rm radio}` for SC-SAM
    | The value given to the SC-SAM for the :math:`\kappa_{\rm radio}` free parameter, which is equal to the prefactor :math:`A_{\rm AGN}` *times* 0.002 (the best-fit fiducial value for this SC-SAM free amplitude parameter for local observations.)
    
-#. | **0.005**
+#. | 0.005
    | This is an unused parameter in CAMELS-SAM for :math:`\epsilon_{\rm wind, QSO}` from the SC-SAM. This was originally meant to be the analogous to :math:`A_{\rm AGN2}` in CAMELS, but the iteration of the SC-SAM used in this work showed little to no response to varying this parameter beyond its fiducial value. 
