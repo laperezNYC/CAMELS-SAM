@@ -2,8 +2,6 @@
 Data Access
 ************
 
-**L.A.P. Note as of 3:28pm EDT Thursday 1/6/2021: Permissions for the LH set are still being figured out; apologies for the delay, and thank you for your interest! This message will be removed once all is functioning as intended.**
-
 The available CAMELS-SAM data is stored in the Rusty cluster of the Flatiron Institute in New York City, and its data can be accessed through four different methods:
 
 .. note::
