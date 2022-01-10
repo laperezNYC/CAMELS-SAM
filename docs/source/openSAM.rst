@@ -119,6 +119,7 @@ Due to know the ``.dat`` format is organized, one must specify exactly which pro
 Here is a more generalized way to open the SAM files for a given set of fields, and not only at a single redshift. Many thanks to Phil Bull for writing it up and allowing me to share it with other users! 
 
 .. code-block:: python
+
   import glob
   root_dir_PB=str('/mnt/ceph/users/camels/PUBLIC_RELEASE/SCSAM/LH_'+str(i)+'/sc-sam')
   #For the LH_ suite, i here will go from 0 to 999; CV_0 to CV_4 also available. For the 1P set, use CV_0 or CV_1, and note the name of the sc-sam folder.
