@@ -4,11 +4,8 @@ Using the SC-SAM catalogs
 
 The Santa Cruz SAM galaxy and halo catalogs are stored as text files with comma-separated values, as *galprop_0-99.dat* and *haloprop_0-99.dat* within all the SC-SAM-generated subvolumes. These files contain information about the halo and galaxies from all snapshots of a given simulation.
 
-We give here an example for how to open these files and pull out galaxy or halo data fulfilling certain conditions. This runs in ``python3``, and most crucically requires ``pandas``, ``subprocess``, and ``numpy``. As the most relevant example for the original creators, this is how to pull out information at a single redshift:
 
-.. warning::
-
-Please note that L.A. Perez is an astrophysicist that taught themselves Python for specific science goals. There are indubitably more efficient and aesthetically pleasing ways of doing this, such as how A. Gabrielpillai created .hdf5 files from the SC-SAM default files.
+We give here an example for how to open these files and pull out galaxy or halo data fulfilling certain conditions. This runs in ``python3``, and most crucically requires ``pandas``, ``subprocess``, and ``numpy``. As the most relevant example for the original creators, this is how L.A. Perez pulled out information at a single redshift:
 
 .. code-block:: python
 
@@ -119,5 +116,65 @@ Due to know the ``.dat`` format is organized, one must specify exactly which pro
           '''This output is a numpy array that can be manipulated in whatever way you like! Columns will be galprop_fields as listed above, each row is a SAM galaxy at redshift Z (or more exactly, whatever Nbody simulation redshift is closest to what you've requested).'''
 
 
+Here is a more generalized way to open the SAM files for a given set of fields, and not only at a single redshift. Many thanks to Phil Bull for writing it up and allowing me to share it with other users! 
+
+.. code-block:: python
+  import glob
+  root_dir_PB=str('/mnt/ceph/users/camels/PUBLIC_RELEASE/SCSAM/LH_'+str(i)+'/sc-sam')
+  #For the LH_ suite, i here will go from 0 to 999; CV_0 to CV_4 also available. For the 1P set, use CV_0 or CV_1, and note the name of the sc-sam folder.
+  galprop_fields = ['redshift', 'sfr', 'mstar', 'mhalo', 'Metal_star', 'sat_type', 'x_position', 'y_position', 'z_position']
+  haloprop_fields = ['redshift','snap_num','spin','m_vir']
+  
+  def load_catalog(fields, root_dir, halos=False, max_rows_per_subvol=None, verbose=True):
+    """
+    Load a catalog of galaxies or halos from the data files.
+    """
+    # Galaxy/halo catalog column names
+    g_cols = ['halo_index', 'birthhaloid', 'roothaloid', 'redshift', 'sat_type',
+                  'mhalo', 'm_strip', 'rhalo', 'mstar', 'mbulge', 'mstar_merge', 'v_disk',
+                  'sigma_bulge', 'r_disk', 'r_bulge', 'mcold', 'mHI', 'mH2', 'mHII', 'Metal_star',
+                  'Metal_cold', 'sfr', 'sfrave20myr', 'sfrave100myr', 'sfrave1gyr',
+                  'mass_outflow_rate', 'metal_outflow_rate', 'mBH', 'maccdot', 'maccdot_radio',
+                  'tmerge', 'tmajmerge', 'mu_merge', 't_sat', 'r_fric', 'x_position',
+                  'y_position', 'z_position', 'vx', 'vy', 'vz']
+    h_cols = ['halo_index', 'halo_id', 'roothaloid', 'orig_halo_ID', 'redshift', 'm_vir', 'c_nfw',
+                  'spin', 'm_hot', 'mstar_diffuse', 'mass_ejected', 'mcooldot',
+                  'maccdot_pristine', 'maccdot_reaccrete', 'maccdot_metal_reaccrete',
+                  'maccdot_metal', 'mdot_eject', 'mdot_metal_eject', 'maccdot_radio',
+                  'Metal_hot', 'Metal_ejected', 'snap_num']
+
+    # Select set of columns
+    cols = h_cols if halos else g_cols
+    data_file = "haloprop_0-99.dat" if halos else "galprop_0-99.dat"
+
+    # Check that requested fields are valid
+    bad_fields = []
+    for f in fields:
+        if f not in cols:
+            bad_fields.append(f)
+    if len(bad_fields) > 0:
+        raise KeyError("Fields %s not found. Available fields: %s" % (bad_fields, cols))
+
+    # Determine which column indices to keep
+    use_cols = [cols.index(col) for col in cols if col in fields]
+
+    # Count subvolumes
+    subvol_dirs = glob.glob("%s/*_*_*" % root_dir)
+
+    # Loop over sub-volumes and load data
+    d = []
+    for i, subvol_dir in enumerate(subvol_dirs):
+        if verbose:
+            print("Loading subvolume %d / %d" % (i+1, len(subvol_dirs)))
+        _d = np.genfromtxt(os.path.join(subvol_dir, data_file),
+                           comments='#',
+                           usecols=use_cols,
+                           max_rows=max_rows_per_subvol)
+        d.append(_d)
+        if verbose:
+            print("    Loaded %d rows" % _d.shape[0])
+    d = np.concatenate(d)
+    return d
+
 .. Note::
-The original pipeline created by Gabrielpillai et al. (2021) included a final step to organize these data into smaller ``.hdf5`` files, but once all the modifications to the pipeline were made for CAMELS-SAM, this step was no longer feasible. Therefore, we share the raw ``.dat`` data format to guarantee all properties are accessible, even if at the cost of larger files that take longer to process.
+The original pipeline created by Gabrielpillai et al. (2021) included a final step to organize these data into smaller ``.hdf5`` files, but once all the modifications to the pipeline were made for CAMELS-SAM, this step was no longer feasible. Therefore, we share the raw ``.dat`` data format to guarantee all properties are accessible, even if at the cost of larger files that take longer to process.'
