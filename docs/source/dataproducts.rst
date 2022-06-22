@@ -104,12 +104,13 @@ We use the Santa Cruz semi-analytic model (SAM) for galaxy formation (Somerville
 +--------------------------+--------+----------+---------------------------------------------------------------------------------+
 | GalpropZstar             | N      | Z☉ * M☉  | metal mass in stars                                                             |
 +--------------------------+--------+----------+---------------------------------------------------------------------------------+
-Note: the version of the SC-SAM used to first run CAMELS-SAM did not save all SF histories (due to our particular needs and priorities), so the averaged SFR properties are currently all zero. We will update this text if the SC-SAM is rerun for any subset of the simulations to update this.
+
 
 .. raw:: html
    </details>
    <br />
 
+Note: the version of the SC-SAM used to first run CAMELS-SAM did not save all SF histories (due to our particular needs and priorities), so the averaged SFR properties are currently all zero. We will update this text if the SC-SAM is rerun for any subset of the simulations to update this.
 
 .. raw:: html
 
