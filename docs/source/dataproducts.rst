@@ -107,8 +107,10 @@ We use the Santa Cruz semi-analytic model (SAM) for galaxy formation (Somerville
 
 
 .. raw:: html
+
    </details>
    <br />
+
 
 .. raw:: html
 
@@ -174,7 +176,6 @@ We use the Santa Cruz semi-analytic model (SAM) for galaxy formation (Somerville
 
    </details>
    <br />
-
 
 
 Identifying each simulation's parameters
