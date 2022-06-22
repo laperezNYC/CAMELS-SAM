@@ -19,6 +19,8 @@ The Santa Cruz SAM for galaxy formation
 
 We use the Santa Cruz semi-analytic model (SAM) for galaxy formation (Somerville et al. 2008, 2015, 2021) to robustly populate our large N-body simulations with galaxies. SAMs can be thought of an alternative to full hydrodynamic simulations, which apply simplified empirical recipes for physical processes of galaxy formation and evolution within dark matter halo 'merger trees' (e.g. from ``ConsistentTrees`` our of ``ROCKSTAR``). Like numerical simulations, SAMs include free parameters that are calibrated to galaxy observations (e.g. Yung et al. 2019 for the local universe). The SC-SAM pipeline used in this work is nearly identical to that applied to IllustrisTNG300 in Gabrielpillai et al. (2021); see their work for complete justification and verification for the fiducial set up.
 
+A note: the SC-SAM that was run for CAMELS-SAM did not store the averaged SFR properties for the galaxies, due to our particular needs and priorities, so all those will be equal to zero.
+
 
 .. raw:: html
 
