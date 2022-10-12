@@ -18,9 +18,9 @@ Simulation sets within the suite
 
 Within CAMELS-SAM, these are these three sets of products publically released:
 
-- | **LH**. This set contains 1,000 simulation products and galaxy catalogs. Each simulation has a different value of the cosmological and astrophysical parameters, are arranged in a latin-hypercube. Each simulation has a different value of the initial random seed. This set represents the main CAMELS-SAM dataset. LH stands for Latin-Hypercube.
-- | **CV**. This set contains 5 simulation products and galaxy catalogs. All the simulations share the value of the cosmological and astrophysical parameters, and they only differ in the value of their initial random seed. This set is typically used to study the effect of cosmic variance due to the simulated volume size. CV stands for Cosmic Variance.
-- | **1P**. This set contains 12 galaxy catalogs. In this set, the SC-SAM was run at the smallest and largest value of each SAM parameter for two of the CV simulations (:math:`0,1`). The value of the random seed is the same in all galaxy catalogs generated atop the same CV simulation. This set can be used to study the change induced by the astrophysical SC-SAM parameters in a given quantity. 1P stands for 1-parameter at a time. (We emphasize this differs from the CAMELS 1P set, which more finely samples the parameter space and also focus on the cosmological parameters.) 
+- | **LH**. This set contains 1,000 simulation products and galaxy catalogs. Each simulation has a different value of the cosmological and astrophysical parameters, are arranged in a latin-hypercube. Each simulation has a different value of the initial random seed. This set represents the main CAMELS-SAM dataset. LH stands for Latin-Hypercube. These can be found within ``camels/PUBLIC_RELEASE/SCSAM/LH_?`` .
+- | **CV**. This set contains 5 simulation products and galaxy catalogs. All the simulations share the value of the cosmological and astrophysical parameters, and they only differ in the value of their initial random seed. This set is typically used to study the effect of cosmic variance due to the simulated volume size. CV stands for Cosmic Variance. These can be found within ``camels/PUBLIC_RELEASE/SCSAM/CV_?`` .
+- | **1P**. This set contains 12 galaxy catalogs. In this set, the SC-SAM was run at the smallest and largest value of each SAM parameter for two of the CV simulations (:math:`0,1`). The value of the random seed is the same in all galaxy catalogs generated atop the same CV simulation. This set can be used to study the change induced by the astrophysical SC-SAM parameters in a given quantity. 1P stands for 1-parameter at a time. (We emphasize this differs from the CAMELS 1P set, which more finely samples the parameter space and also focus on the cosmological parameters.) These can be found within These can be found within ``camels/PUBLIC_RELEASE/SCSAM/CV_0`` and ``CV_1``, in folders named e.g. ``Asn1x0p25-sc-sam`` .
 
 
 Characteristics
@@ -41,7 +41,7 @@ CAMELS-SAM has been designed to sample the parameter space of cosmology (by vary
 +=======================+===============================================================+===============================+
 |:math:`\Omega_{\rm m}` |Fraction of energy density in matter (dark matter + baryons)   |[0.1,0.5] linearly, fid.=0.3   |
 +-----------------------+---------------------------------------------------------------+-------------------------------+
-|:math:`\sigma_8`       |Variance of the linear field on :math:`8~h^{-1}{\rm Mpc}`      |[0.8,1.0] linearly, fid.=0.8   |
+|:math:`\sigma_8`       |Variance of the linear field on :math:`8~h^{-1}{\rm Mpc}`      |[0.6,1.0] linearly, fid.=0.8   |
 |                       |at :math:`z=0`                                                 |                               |
 +-----------------------+---------------------------------------------------------------+-------------------------------+
 |:math:`A_{\rm SN1}`    |Normalization of mass outflow rate of cold gas due to SN winds;|[0.25,4.0] logarithmically,    |
@@ -54,6 +54,7 @@ CAMELS-SAM has been designed to sample the parameter space of cosmology (by vary
 |                       |(Somerville et al. 2008, Eq. 20)                               |fid.=1.0                       |
 +-----------------------+---------------------------------------------------------------+-------------------------------+
 
+We note that each simulation's file describing their parameter, ``CosmoAstro_params.txt``, lists the for the astrophysical parameters the convolution with the base fiducial SC-SAM value. Therefore, each file will list: :math:`\Omega_{\rm m}` , :math:`\sigma_8` , :math:`A_{\rm SN1} \times 1.7`, :math:`A_{\rm SN2} + 3`, :math:`A_{\rm AGN} \times 0.002` , and a vestigial parameter set to 0.5.
 
 Redshifts
 ------------
