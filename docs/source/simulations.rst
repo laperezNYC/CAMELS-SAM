@@ -6,7 +6,7 @@ Description of Simulations
 Overview of CAMELS-SAM
 ------------
 
-A complete description of the suite, its creation, and application can be found in Perez, Genel, et al. (2022): https://arxiv.org/abs/2204.02408 .
+A complete description of the suite, its creation, and application can be found in Perez, Genel, et al. (2023, in press as of July 2023): https://arxiv.org/abs/2204.02408 .
 
 The backbone of CAMELS-SAM are the 1,000+ N-body only ``AREPO`` simulations we generated across 100 snapshots between :math:`z=127` to :math:`z=0` across the broad cosmological parameter space of CAMELS. Each simulation was run through ``ROCKSTAR`` to generate halo catalogs at each snapshot, and then ``ConsistentTrees`` to generate merger trees. We feed this finely sampled merger tree history into the ``Santa Cruz semi-analytic model`` (SC-SAM, hence CAMELS-SAM) for galaxy formation. The parameters we vary across the suite are :math:`\Omega_{\rm M}`, :math:`\sigma_{8}`, :math:`A_{\rm SN1}`, :math:`A_{\rm SN2}`, and :math:`A_{\rm AGN}`. The later 3 are pre-factors to three SC-SAM parameters controlling, respectively, the amplitude and rate of mass outflow from massive stars out of a galaxy, and the strength of the radio jet mode of AGN.
 
@@ -58,7 +58,7 @@ We note that each simulation's file describing their parameter, ``CosmoAstro_par
 
 Redshifts
 ------------
-The CAMELS-SAM simulations were generated over 100 snapshots between z=127 and z=0, following the same steps as ``IllustrisTNG``:
+The CAMELS-SAM simulations were generated over 100 snapshots between z=20 and z=0, following the same steps as ``IllustrisTNG``:
 
 .. raw:: html
 
