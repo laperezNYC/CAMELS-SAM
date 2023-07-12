@@ -10,18 +10,17 @@ See the :doc:`simulations` section for complete details about the suite, includi
 
 .. only:: html
 
-   .. figure:: movie_s099.mov
+   .. figure:: CheckSAMGalaxypositions_cLH11.gif
 
-      Slicing through the dark matter in simulation 341--look at that structure!
-      
+      Slicing through the SAM galaxies in simulation 11--look at that structure!
+
 
 
 .. only:: html
 
    .. figure:: CheckSAMGalaxypositions_cLH19.gif
 
-      And now the SAM galaxies simulation 19!
-
+      And now simulation 19, with very different cosmology!
 
    
 .. raw:: html
