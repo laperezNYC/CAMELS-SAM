@@ -10,6 +10,7 @@ We give here an example for how to open these files and pull out galaxy or halo 
 .. code-block:: python
 
   def ProcessSAMdat_single_redshift(path_to_SAM, Nsubvols, sought_z, fieldswanted, gal_or_halo):
+      #NOTE: these ?_colnames are the columns, in order, of the data in the original .dat files. You can give fieldswanted in nearly any order, but the order that the columns will take in the final array will depend on the fields' order in these lists. NOTE: if you care about halo_index, birthhaloID, or roothaloID, redshift will NOT be in the 0th index; update the line below that assumes that!
       g_colnames = ['halo_index', 'birthhaloid', 'roothaloid', 'redshift', 'sat_type',
                     'mhalo', 'm_strip', 'rhalo', 'mstar', 'mbulge', 'mstar_merge', 'v_disk',
                     'sigma_bulge', 'r_disk', 'r_bulge', 'mcold', 'mHI', 'mH2', 'mHII', 'Metal_star',
@@ -47,7 +48,7 @@ We give here an example for how to open these files and pull out galaxy or halo 
                       # print('galprop read for ',x_i, x_j, x_k,' shape:', galprop.shape)
                       current_galprops=galprop[fieldswanted[:]].to_numpy()
                       print('For subvolume ',x_i,x_j,x_k, current_galprops.shape)
-                      unique_redshifts=set(current_galprops[:,0])
+                      unique_redshifts=set(current_galprops[:,0]) #update this if redshift will NOT be in the 0th column; see note above
                       unique_redshifts = np.array(sorted(unique_redshifts))
                       # print(unique_redshifts)
                       idx = (np.abs(unique_redshifts - sought_z)).argmin()
@@ -81,7 +82,7 @@ We give here an example for how to open these files and pull out galaxy or halo 
           print("Column names of haloprop file: ", h_colnames)
           return All_halos
 
-Lines commented out are to confirm the files are being read correctly; *checknums* and *All_halos.shape* should be the same length, if all (sub)halos were correctly accessed at each redshift.
+Lines commented out are to confirm the files are being read correctly; *checknums* and *All_halos.shape* should be the same length, if all (sub)halos were correctly accessed at each redshift. If your fieldswanted includes 'halo_index', 'birthhaloid', or 'roothaloid', update "unique_redshifts=set(current_galprops[:,0])" to reflect that redshfit won't be the first column.
 
 Due to know the ``.dat`` format is organized, one must specify exactly which properties should be collected as the ``fieldswanted`` string. See :doc:`dataproducts` for the complete list of available properties for galaxies (*galprop*) and halos (*haloprop*). Additionally, the number of subvolumes is important, and corresponds to how the SC-SAM automatically splits up large volumes for processing (either 1 or 8 for CAMELS-SAM). For example, to access galaxy data at *z=0, 0.1, 0.5, 1.0* for CAMELS-SAM simulations LH0 through LH5:
 
