@@ -10,7 +10,7 @@ We give here an example for how to open these files and pull out galaxy or halo 
 .. code-block:: python
 
   def ProcessSAMdat_single_redshift(path_to_SAM, Nsubvols, sought_z, fieldswanted, gal_or_halo):
-      #NOTE: these ?_colnames are the columns, in order, of the data in the original .dat files. You can give fieldswanted in nearly any order, but the order that the columns will take in the final array will depend on the fields' order in these lists. NOTE: if you care about halo_index, birthhaloID, or roothaloID, redshift will NOT be in the 0th index; update the line below that assumes that!
+      ###NOTE: these ?_colnames are the columns, in order, of the data in the original .dat files. You can give fieldswanted in nearly any order, but the order that the columns will take in the final array will depend on the fields' order in these lists. NOTE: if you care about halo_index, birthhaloID, or roothaloID, redshift will NOT be in the 0th index; update the line below that assumes that!
       g_colnames = ['halo_index', 'birthhaloid', 'roothaloid', 'redshift', 'sat_type',
                     'mhalo', 'm_strip', 'rhalo', 'mstar', 'mbulge', 'mstar_merge', 'v_disk',
                     'sigma_bulge', 'r_disk', 'r_bulge', 'mcold', 'mHI', 'mH2', 'mHII', 'Metal_star',
