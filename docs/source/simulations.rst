@@ -44,18 +44,18 @@ CAMELS-SAM has been designed to sample the parameter space of cosmology (by vary
 |:math:`\sigma_8`       |Variance of the linear field on :math:`8~h^{-1}{\rm Mpc}`      |[0.6,1.0] linearly, fid.=0.8   |
 |                       |at :math:`z=0`                                                 |                               |
 +-----------------------+---------------------------------------------------------------+-------------------------------+
-|:math:`A_{\rm SN1}`    |Multiplicative factor for the normalization of mass outflow    |fid.=1.0                       |
-|                       |rate of cold gas due to SN winds;|[0.25,4.0] logarithmically,  |                               |
-|                       |SN feedback efficiency (Somerville et al. 2015, Eq. 2)         |                               |
+|:math:`A_{\rm SN1}`    |Multiplicative factor for the normalization of mass outflow    |[0.25,4.0] logarithmically,    |
+|                       |rate of cold gas due to SN winds & SN feedback efficiency      |fid.=1.0                       |
+|                       |(Somerville et al. 2015, Eq. 2)                                |                               |
 +-----------------------+---------------------------------------------------------------+-------------------------------+
 |:math:`A_{\rm SN2}`    |Additive factor to the power-law slope of mass outflow rate;   [-2.0,2.0] linearly,            |
 |                       |SN feedback slope (Somerville et al. 2015, Eq. 2)              |fid.=1.0                       |
 +-----------------------+---------------------------------------------------------------+-------------------------------+
 |:math:`A_{\rm AGN}`    |Multiplicative factor for the n Normalization of 'radio mode'  |[0.25,4.0] logarithmically,    |
-|                       |AGN feedback (Somerville et al. 2008, Eq. 20)                   fid.=1.0                       |
+|                       |AGN feedback (Somerville et al. 2008, Eq. 20)                  |fid.=1.0                       |
 +-----------------------+---------------------------------------------------------------+-------------------------------+
 
-We note that each simulation's file describing their parameter, ``CosmoAstro_params.txt``, lists the for the astrophysical parameters the convolution with the base fiducial SC-SAM value. Each file will list: :math:`\Omega_{\rm m}` , :math:`\sigma_8` , :math:`A_{\rm SN1} \times 1.7`, :math:`A_{\rm SN2} + 3`, :math:`A_{\rm AGN} \times 0.002` (inscribing how the latin hypercube itself was generated), and a vestigial parameter set to 0.5. These are the parameters that went directly into creating each CAMELS-SAM N-body simulation and SC-SAM catalog.
+We note that each simulation's file describing their parameter, ``CosmoAstro_params.txt``, lists the for the astrophysical parameters the convolution with the base fiducial SC-SAM value. Each file will list: :math:`\Omega_{\rm m}` , :math:`\sigma_8` , :math:`A_{\rm SN1} \times 1.7`, :math:`A_{\rm SN2} + 3`, :math:`A_{\rm AGN} \times 0.002`, and a vestigial parameter set to 0.5. These are the parameters that went directly into creating each CAMELS-SAM N-body simulation and SC-SAM catalog. For those who are curious, this comes from how the latin hypercube was created: the minimum/lower and maximum/upper bounds are, respectively:  :math:`\Omega_{\rm m}=[0.1, 0.6]` , :math:`\sigma_8=[0.6, 1.0]` , :math:`A_{\rm SN1}=[0.25, 4.0] \times 1.7`, :math:`A_{\rm SN2}=[-2,2] + 3`, :math:`A_{\rm AGN}=[0.25, 4.0] \times 0.002`
 
 Redshifts
 ------------
