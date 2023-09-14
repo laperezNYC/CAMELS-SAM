@@ -48,7 +48,7 @@ CAMELS-SAM has been designed to sample the parameter space of cosmology (by vary
 |                       |rate of cold gas due to SN winds & SN feedback efficiency      |fid.=1.0                       |
 |                       |(Somerville et al. 2015, Eq. 2)                                |                               |
 +-----------------------+---------------------------------------------------------------+-------------------------------+
-|:math:`A_{\rm SN2}`    |Additive factor to the power-law slope of mass outflow rate;   [-2.0,2.0] linearly,            |
+|:math:`A_{\rm SN2}`    |Additive factor to the power-law slope of mass outflow rate;   |[-2.0,2.0] linearly,           |
 |                       |SN feedback slope (Somerville et al. 2015, Eq. 2)              |fid.=1.0                       |
 +-----------------------+---------------------------------------------------------------+-------------------------------+
 |:math:`A_{\rm AGN}`    |Multiplicative factor for the n Normalization of 'radio mode'  |[0.25,4.0] logarithmically,    |
