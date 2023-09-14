@@ -55,7 +55,7 @@ CAMELS-SAM has been designed to sample the parameter space of cosmology (by vary
 |                       |AGN feedback (Somerville et al. 2008, Eq. 20)                   fid.=1.0                       |
 +-----------------------+---------------------------------------------------------------+-------------------------------+
 
-We note that each simulation's file describing their parameter, ``CosmoAstro_params.txt``, lists the for the astrophysical parameters the convolution with the base fiducial SC-SAM value. Each file will list: :math:`\Omega_{\rm m}` , :math:`\sigma_8` , :math:`A_{\rm SN1} \times 1.7`, :math:`A_{\rm SN2} + 3`, :math:`A_{\rm AGN} \times 0.002` (inscribing how the latin hypercube itself was generated), and a vestigial parameter set to 0.5. These are the parameter that went directly into creating each CAMELS-SAM N-body simulation and SC-SAM catalog.
+We note that each simulation's file describing their parameter, ``CosmoAstro_params.txt``, lists the for the astrophysical parameters the convolution with the base fiducial SC-SAM value. Each file will list: :math:`\Omega_{\rm m}` , :math:`\sigma_8` , :math:`A_{\rm SN1} \times 1.7`, :math:`A_{\rm SN2} + 3`, :math:`A_{\rm AGN} \times 0.002` (inscribing how the latin hypercube itself was generated), and a vestigial parameter set to 0.5. These are the parameters that went directly into creating each CAMELS-SAM N-body simulation and SC-SAM catalog.
 
 Redshifts
 ------------
