@@ -21,6 +21,10 @@ Binder is a system that allows users to read and manipulate data that is hosted 
 
    Two important things need to be taken into account when using Binder. First, the Binder environment is ephemeral - after a few days of inactivity its contents are deleted, so one has to be vigilant about downloading any analysis results in time. Second, Binder is not designed to carry out long and heavy calculations. In this case we recommend the user to download the data and work with it locally. 
 
+.. important::
+
+As of July 2024, we require users interested in using binder to fill up `this google form <https://docs.google.com/forms/d/e/1FAIpQLSdFrUv41bwnYVsgEzjx7p5fgFXZHp1lUYHHxVfSHCJMXm32rA/viewform>`_. Please reach out to us at camel.simulations@gmail.com if you do not have access after 1-2 days from the time of filling up the form.
+
 `Link to Binder <https://binder.flatironinstitute.org/~sgenel/CAMELS_PUBLIC>`_
 
 
